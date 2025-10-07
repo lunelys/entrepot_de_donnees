@@ -14,18 +14,21 @@ Création d'une fiche KPIs :
 | new_customers_per_month | Nombre de nouveaux clients par mois | customers | Somme par date d’inscription |
 
 Concept PACE : Planifier, Analyser, Construire, Executer
+Dans cette séance, on est dans la phase P, Planification du PACE ici
 
 ## Séance 2 : Modèles de données et architectures
 Création d'un schéma en étoile pour la database ecommerce_dw : fact_sales en table de fait au milieu, reliée par clés aux tables de dimensions orders, customers, et product. Noter les cardinalités 0,1 to many et 1 to many.
+Dans cette séance, on est dans la phase A, Analyse du PACE ici : on a modélisé le début de notre planification.
 
 ## Séance 3
 Exploration de la notion de scalabilité. Création de la database correspondant au schéma à la séance 2.
+Dans cette séance, on entre dans la phase C de Construction du PACE ici
 
 ## Séance 4 : analyse et conception
 Faire attention aux valeurs aberrantes, null values, doublons, formats, encodages
 
 ## Séance 5 Intégration et transformation I
-Notions de datalakes, ETL/ELT (passage sur pgadmin/postgresql pour dbt puisque pas de connecteur sur dbt-cloud)
+Notions de datalakes, ETL/ELT (passage sur pgadmin/postgresql pour dbt puisque pas de connecteur sur dbt-cloud : database exportée depuis pgadmin, voir fichier )
 
 ## Séance 6
 Utilisation de dbt-core pour lier la base de données ecommerce depuis postgresql. Staging et tests
@@ -41,7 +44,7 @@ Repris la table de la séance 1 pour calculer les KPIs dans pgadmin
 | customer_per_country | customers | SELECT country, COUNT(id_customer) FROM customers GROUP BY country |
 
 ## Séance 8 : Exploitation et gestion II (qualité & monitoring)
-E du PACE : Executif. On présente les résultats via tableau public
+Nous sommes enfin dans la phase E du PACE : Executif. On présente les résultats via tableau public, calcul des KPIs (voir fichier dashboard)
 
 ## Séance 9 : sécurité et contrôle
-Focus sur la sécurité. Rôles dans la database pour compartimenter et protéger les données. Masquage des données
+Focus sur la sécurité. Rôles dans la database pour compartimenter et protéger les données. Masquage des données, par exemple les emails
