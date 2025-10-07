@@ -27,10 +27,10 @@ Exploration de la notion de scalabilité. Création de la database correspondant
 ## Séance 4 : analyse et conception
 Faire attention aux valeurs aberrantes, null values, doublons, formats, encodages
 
-## Séance 5 Intégration et transformation I
+## Séance 5 Intégration et transformation 1
 Notions de datalakes, ETL/ELT (passage sur pgadmin/postgresql pour dbt puisque pas de connecteur sur dbt-cloud : database exportée depuis pgadmin, voir fichier )
 
-## Séance 6
+## Séance 6 Intégration et transformation 2
 Utilisation de dbt-core pour lier la base de données ecommerce depuis postgresql. Staging et tests
 
 ## Séance 7: exploitation et gestion 1
@@ -43,7 +43,7 @@ Repris la table de la séance 1 pour calculer les KPIs dans pgadmin
 | new_customers_per_month | customers | SELECT EXTRACT(MONTH FROM signup_date), COUNT(id_customer) FROM customers GROUP BY EXTRACT(MONTH FROM signup_date) |
 | customer_per_country | customers | SELECT country, COUNT(id_customer) FROM customers GROUP BY country |
 
-## Séance 8 : Exploitation et gestion II (qualité & monitoring)
+## Séance 8 : Exploitation et gestion 2 (qualité & monitoring)
 Nous sommes enfin dans la phase E du PACE : Executif. On présente les résultats via tableau public, présentation des KPIs calculés dans la séance précédente (voir fichier dashboard)
 
 ## Séance 9 : sécurité et contrôle
