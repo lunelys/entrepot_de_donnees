@@ -13,16 +13,15 @@ Création d'une fiche KPIs :
 | avg_cart | Panier moyen | orders | Moyenne montant total par mois |
 | new_customers_per_month | Nombre de nouveaux clients par mois | customers | Somme par date d’inscription |
 
-Concept PACE : Planifier, Analyser, Construire, Executer
-Dans cette séance, on est dans la phase P, Planification du PACE ici
+Concept PACE : Planifier, Analyser, Construire, Executer : dans cette séance, on est dans la phase P, Planification du PACE ici
 
 ## Séance 2 : Modèles de données et architectures
 Création d'un schéma en étoile pour la database ecommerce_dw : fact_sales en table de fait au milieu, reliée par clés aux tables de dimensions orders, customers, et product. Noter les cardinalités 0,1 to many et 1 to many.
+
 Dans cette séance, on est dans la phase A, Analyse du PACE ici : on a modélisé le début de notre planification.
 
 ## Séance 3
-Exploration de la notion de scalabilité. Création de la database correspondant au schéma à la séance 2.
-Dans cette séance, on entre dans la phase C de Construction du PACE ici
+Exploration de la notion de scalabilité. Création de la database correspondant au schéma à la séance 2 : phase C de Construction du PACE ici
 
 ## Séance 4 : analyse et conception
 Faire attention aux valeurs aberrantes, null values, doublons, formats, encodages
