@@ -8,10 +8,12 @@ Création d'une fiche KPIs :
 
 | Nom | Intitulé | Table reliée | Comment calculer |
 | --- | --- | --- | --- |
-| chiffre_affaire (turnover ?) | Chiffre d’affaire | orders | Montant total x nombre |
+| chiffre_affaire | Chiffre d’affaire | orders | Montant total x nombre |
 | sales_volume_per_product | Volume de vente d’un produit | order_item | Somme des quantité de vente d’un produit |
-| avg_cart | Panier moyen | orders | Moyenne montant total par mois (date) |
+| avg_cart | Panier moyen | orders | Moyenne montant total par mois |
 | new_customers_per_month | Nombre de nouveaux clients par mois | customers | Somme par date d’inscription |
+
+Concept PACE : Planifier, Analyser, Construire, Executer
 
 ## Séance 2 : Modèles de données et architectures
 Création d'un schéma en étoile pour la database ecommerce_dw : fact_sales en table de fait au milieu, reliée par clés aux tables de dimensions orders, customers, et product. Noter les cardinalités 0,1 to many et 1 to many.
@@ -32,8 +34,8 @@ Utilisation de dbt-core pour lier la base de données ecommerce depuis postgresq
 Repris la table de la séance 1 pour calculer les KPIs dans pgadmin
 | Nom | Table reliée | Comment calculer |
 | --- | --- | --- |
-| chiffre_affaire_par_mois | orders | SELECT EXTRACT(MONTH FROM order_date), SUM(total_amount) FROM orders GROUP BY EXTRACT(MONTH FROM order_date)ATTENTION : il fallait garder l’année, parce que sinon t’auras le mois de février 2024 |
-| sales_volume_per_product | order_item | SELECT SUM(quantity) FROM order_itemsGROUP BY id_product |
+| chiffre_affaire_par_mois | orders | SELECT EXTRACT(MONTH FROM order_date), SUM(total_amount) FROM orders GROUP BY EXTRACT(MONTH FROM order_date) |
+| sales_volume_per_product | order_item | SELECT SUM(quantity) FROM order_items GROUP BY id_product |
 | avg_cart_per_month | orders | SELECT EXTRACT(MONTH FROM order_date), AVG(total_amount) FROM orders GROUP BY EXTRACT(MONTH FROM order_date) |
 | new_customers_per_month | customers | SELECT EXTRACT(MONTH FROM signup_date), COUNT(id_customer) FROM customers GROUP BY EXTRACT(MONTH FROM signup_date) |
 | customer_per_country | customers | SELECT country, COUNT(id_customer) FROM customers GROUP BY country |
