@@ -43,7 +43,7 @@ Repris la table de la séance 1 pour calculer les KPIs dans pgadmin
 | customer_per_country | customers | SELECT country, COUNT(id_customer) FROM customers GROUP BY country |
 
 ## Séance 8 : Exploitation et gestion II (qualité & monitoring)
-Nous sommes enfin dans la phase E du PACE : Executif. On présente les résultats via tableau public, calcul des KPIs (voir fichier dashboard)
+Nous sommes enfin dans la phase E du PACE : Executif. On présente les résultats via tableau public, présentation des KPIs calculés dans la séance précédente (voir fichier dashboard)
 
 ## Séance 9 : sécurité et contrôle
 Focus sur la sécurité. Rôles dans la database pour compartimenter et protéger les données. Masquage des données, par exemple les emails
