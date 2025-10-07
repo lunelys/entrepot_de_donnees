@@ -12,6 +12,7 @@ Création d'une fiche KPIs :
 | sales_volume_per_product | Volume de vente d’un produit | order_item | Somme des quantité de vente d’un produit |
 | avg_cart | Panier moyen | orders | Moyenne montant total par mois |
 | new_customers_per_month | Nombre de nouveaux clients par mois | customers | Somme par date d’inscription |
+| localisation | Localisation des clients| customers | Pays|
 
 Concept PACE : Planifier, Analyser, Construire, Executer : dans cette séance, on est dans la phase P, Planification du PACE ici
 
