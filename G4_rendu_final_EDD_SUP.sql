@@ -1,1 +1,0 @@
-SELECT country, COUNT(id_customer) FROM customers GROUP BY country
